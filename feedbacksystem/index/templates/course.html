@@ -1,0 +1,80 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Courses Page</title>
+{% endblock %}
+
+{% block main_content %}
+
+<h2>Courses Offered by us are </h2>
+<div class="main" style="display: flex; flex-wrap: wrap;">
+<div class="card" style="width: calc(33.33% - 20px); margin-right: 20px; margin-bottom: 20px;">
+  <img src="{% static 'images/lpy.jpeg' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Python</h5>
+    <p class="card-text">Python Programming is an important part while learning Python.
+      Some of the topics covered are Introduction to Python Language, Python Language Syntax,
+      Python Keywords and Identifiers, Python Variables, Data Types, Operators, etc.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" style="width: calc(33.33% - 20px); margin-right: 20px; margin-bottom: 20px;">
+  <img src="{% static 'images/ljs.png' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Java Script</h5>
+    <p class="card-text">It covers variables, data types, functions, control flow, DOM manipulation,
+      event handling, AJAX, and more. You will learn how to write JavaScript code, build interactive
+      web pages, and work with popular JavaScript libraries and frameworks.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" style="width: calc(33.33% - 20px); margin-right: 20px; margin-bottom: 20px;">
+  <img src="{% static 'images/lds.png' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Data Science</h5>
+    <p class="card-text">This course, a blend of self-paced learning modules and Live Guidance Sessions, will introduce you to the world of Data Science from collecting various
+      types of data to storing, pre-processing, analyzing, model building and deploying them with
+      latest Data Science.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" style="width: calc(33.33% - 20px); margin-right: 20px; margin-bottom: 20px;">
+  <img src="{% static 'images/lda.jpeg' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Data Analysis</h5>
+    <p class="card-text">This course presents you with a gentle introduction to Data Analysis,
+      the role of a Data Analyst, and the tools used in this job. You will learn about the skills
+      and responsibilities of a data analyst and hear from several data experts sharing their tips
+      & advice to start a career.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" style="width: calc(33.33% - 20px); margin-right: 20px; margin-bottom: 20px;">
+  <img src="{% static 'images/laws.png' %}" class="card-img-top" alt="..." >
+  <div class="card-body">
+    <h5 class="card-title">AWS</h5>
+    <p class="card-text">Amazon Web Services (the AWS Full Form certification) is one of the most
+      valued cloud-associated expertise credentials obtained by professionals after passing the
+      subsequent exams offered by the AWS Cloud platform.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" style="width: calc(33.33% - 20px); margin-right: 20px; margin-bottom: 20px;">
+  <img src="{% static 'images/lphp.png' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">PHP</h5>
+    <p class="card-text">The Introduction to PHP course will give you a comprehensive understanding
+      of the basics of PHP as well as its advanced concepts. By the end of this course, you will have
+      an in-depth understanding of PHP and how it can work with HTML and databases in the creation of
+      dynamic web applications.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+  </div>
+{% endblock %}

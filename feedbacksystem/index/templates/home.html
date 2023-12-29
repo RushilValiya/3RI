@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    {% block Title %}
+    <title>Home page</title>
+    {% endblock %}
+    <style>
+    .head{
+        display:flex;
+        background-color:#ffffff;
+    }
+    a{
+        margin-right:50px;
+        margin-top:50px;
+    }
+    .nav-link:hover {
+        color: black;
+        border-radius: 5px;
+        text-decoration: underline;
+        transition: background-color 0.3s ease, text-decoration 0.3s ease;
+    }
+    .nav-link{
+        cursor: pointer;
+    }
+    .main img {
+        width: 400px;
+        height: 200px;
+        object-fit: cover;
+        margin: 10px;
+    }
+    </style>
+</head>
+<body>
+<div class="head">
+{% block logo %}
+<img src="{% static 'images/logo.png' %}" alt="Logo" width="200" height="150">
+{% endblock %}
+{% block navbar %}
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-disabled="true" href="{% url 'home' %}">Home</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" aria-disabled="true" href="{% url 'about' %}">About Us</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" aria-disabled="true" href="{% url 'contact' %}">Contact Us</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" aria-disabled="true" href="{% url 'course' %}">Courses Offered</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" aria-disabled="true" href="{% url 'signup' %}">SignUp</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" aria-disabled="true" href="{% url 'signin' %}">SignIn</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" aria-disabled="true" href="{% url 'feedback' %}">Feedback</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" aria-disabled="true" href="{% url 'signout' %}">SignOut</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+{% endblock %}
+<div class="home">
+{% block main_content %}
+<div class="main">
+<img src="{% static 'images/welcome.png' %}">
+<img src="{% static 'images/python.jpeg' %}">
+<img src="{% static 'images/java.jpeg' %}">
+<img src="{% static 'images/ds.jpeg' %}">
+<img src="{% static 'images/ml.jpeg' %}">
+<img src="{% static 'images/da.jpeg' %}">
+</div>
+{% endblock %}
+{% block footer %}
+<h2 style="text-align: center; margin-top:auto;">Our Clients</h2>
+<div class="foot" style="display:flex; height:80px; margin-left:250px; margin-right:250px; justify-content:space-evenly; ">
+<img src="{% static 'images/c1.png' %}">
+<img src="{% static 'images/c2.png' %}">
+<img src="{% static 'images/c3.png' %}">
+<img src="{% static 'images/c4.png' %}">
+<img src="{% static 'images/c5.png' %}">
+</div>
+{% endblock %}
+</div>
+</body>
+</html>

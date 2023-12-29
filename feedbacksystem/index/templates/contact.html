@@ -1,0 +1,47 @@
+{% extends 'home.html' %}
+
+{% block title %}
+    <title>Contact Page</title>
+{% endblock %}
+
+{% block main_content %}
+<div class="main" style="background-color:#22333b; color: white; padding: 20px;">
+    <h2 style="margin-left: 100px;">Contact Us</h2>
+    <p style="margin-left: 100px;">
+        We are happy you have taken the first step. Let's get started and discuss how we can drive digital outcomes for your business.
+        <br>
+        We are processing your message and our consultants shall reach out to you in 48 working hours.
+    </p>
+
+    <div class="contact-form" style="margin-left: 100px;">
+        <form action="/submit_contact" method="POST">
+            <table style="width: 100%; cellspacing: 10px;">
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" id="name" name="name" required style="border: none; border-bottom: 1px solid white; background-color: transparent; color: white; padding: 5px; width: 100%;"></td>
+
+                    <td style="padding-left: 20px;"><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" required style="border: none; border-bottom: 1px solid white; background-color: transparent; color: white; padding: 5px; width: 100%;"></td>
+                </tr>
+                <tr>
+                    <td><label for="contactno">Contact Number:</label></td>
+                    <td><input type="tel" id="contactno" name="contactno" required style="border: none; border-bottom: 1px solid white; background-color: transparent; color: white; padding: 5px; width: 100%;"></td>
+
+                    <td style="padding-left: 20px;"><label for="country">Country:</label></td>
+                    <td>
+                        <select id="country" name="country" required>
+                            <option value="" disabled selected>Select your country</option>
+                            <option value="usa">United States</option>
+                            <option value="canada">Canada</option>
+                            <option value="uk">United Kingdom</option>
+                            <!-- Add more countries as needed -->
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+            <button type="submit" style="margin-top: 10px; background-color: white; color: black; border: none; padding: 10px 20px; cursor: pointer;">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

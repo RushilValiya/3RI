@@ -1,0 +1,19 @@
+{% extends 'home.html' %}
+{% block title %}
+    <title>feedback Page</title>
+{% endblock %}
+{% block main_content %}
+<div style="margin: 0 auto; padding: 20px; background-color:#22333b;">
+        <div style="padding: 20px; border-radius: 5px;">
+            <h2 style="color:white;">Enter Your Feedback</h2>
+            <form method="post" style="margin-top: 15px;">
+                {% csrf_token %}
+                <div style="margin-bottom: 15px;">
+                    <label for="feedback" style="font-weight: bold; color:white;">Your Feedback:</label>
+                    <textarea id="feedback" name="feedback" rows="5" style="width: 100%; padding: 10px; border-radius: 5px;" required></textarea>
+                </div>
+                <button type="submit" style="color:black; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

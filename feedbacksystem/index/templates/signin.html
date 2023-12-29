@@ -1,0 +1,25 @@
+{% extends 'home.html' %}
+{% block title %}
+    <title>SignUp Page</title>
+{% endblock %}
+{% block main_content %}
+<form method="POST" novalidate>
+    <div class="main" style="display:flex;">
+        <div class="main" style="background-color:#22333b; color: white; width: 100%; padding: 10px;">
+            <table style="border-collapse: collapse; margin-left:100px;">
+                {% csrf_token %}
+                {% for fm in form %}
+                    <tr>
+                        <td style="padding: 10px; text-align: right; font-weight: bold;">{{ fm.label_tag }}</td>
+                        <td style="padding: 10px;">{{ fm }}</td>
+                        <td style="padding: 10px; color: red;">{{ fm.errors }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <div style="text-align: center; margin-right:860px;">
+                <input type="submit" value="SignIn" style="cursor:pointer;">
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}
